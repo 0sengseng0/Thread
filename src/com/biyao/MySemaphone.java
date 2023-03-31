@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Semaphore;
 
-/*
+/**
  * @Author:hxs
  * @Description: 6辆车抢3个车位 Semaphore信号量主要用于两个目的，一个是用于多个资源的互斥作用，另一个用于并发线程数的控制
  */
 public class MySemaphone {
     public static void main(String[] args) {
-        Semaphore semaphore = new Semaphore(3); //3个车位
+        //3个车位
+        Semaphore semaphore = new Semaphore(3); 
         for(int i=1;i<7;i++){
             new Thread(new Runnable() {
                 @Override
